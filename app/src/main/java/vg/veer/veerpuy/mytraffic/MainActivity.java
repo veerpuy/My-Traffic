@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
         // 3. Call From Java
         my_data myData = new my_data();
-        String[] detailStrings = myData.getDetStrings();
+        final String[] detailStrings = myData.getDetStrings();
 
 
         MyAdapter myAdapter = new MyAdapter(this, iconIns, nameStrings, detailStrings);
@@ -107,6 +107,11 @@ public class MainActivity extends AppCompatActivity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }       // Main Method
+
+    @Override
+    public void onBackPressed() {
+       // super.onBackPressed();
+    }
 
     @Override
     public void onStart() {
