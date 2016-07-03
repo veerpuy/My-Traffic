@@ -21,11 +21,11 @@ public class MyAdapter extends BaseAdapter {
     public MyAdapter(Context context,
                      int[] iconInts,
                      String[] nameStrings,
-                     String[] deteStrings) {
+                     String[] detailStrings) {
         this.context = context;
         this.iconInts = iconInts;
         this.nameStrings = nameStrings;
-        this.detailStrings = deteStrings;
+        this.detailStrings = detailStrings;
     }
 
     @Override
